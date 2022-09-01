@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+<div class="login_container">
+    <div class="login_inner">
+        <div class="login_title">
+            <P><span>Welcome!</span> 안티포어에 오신 것을 환영합니다!</P>
+        </div>
+        <div class="login_main">
+            <div class="login_main_inner">
+                <form method="post" action="{% url 'common:login' %}">
+                    {% csrf_token %}
+                    <input type="text" class="input_box" name="username" id="username" placeholder="아이디를 입력하세요." value="{{ form.username.value|default_if_none:'' }}">
+                    <input type="password" class="input_box" name="password" id="password" placeholder="비밀번호를 입력하세요." value="{{ form.password.value|default_if_none:'' }}">
+                    <button type="submit" class="login_button">로그인</button>
+                </form>
+                <div class="login_main_inner_text">
+                    <p>* 타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다.
+                    <br>* 안티포어 공식 홈페이지는 Internet Explorer 9.0 이상, Chrome, Firefox 브라우저에 최적화 되어있습니다.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>

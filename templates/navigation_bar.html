@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('.navigation_bottom > ul > li').mouseenter(function(){
+                let menu_i = $(this).index();
+                
+                if(menu_i < 5) { //하단 바(빨간색) 이동으로 인해 index는 4 이하로 한정시킴
+                    $('.navigation_bottom > ul > li').eq($(this).index()).css({
+                        background:'#2c2a29',
+                    })
+                    $('.navigation_link_bottom').eq($(this).index()).css({
+                        color:'#539900',
+                        'text-decoration':'underline'
+                    })
+
+                    $('.sub_menu').css({ //모두 display:none 시킨 후 
+                        display:'none'
+                        
+                    }).eq($(this).index()).css({ // 해당 인덱스 넘버만 보여질 수 있도록 한다.
+                        display:'flex'
+                    })
+                }
+            });
+            $('.navigation_bottom > ul > li').mouseleave(function(){
+                let menu_i = $(this).index();
+        
+                if(menu_i < 5) {
+                    $('.navigation_bottom > ul > li').eq($(this).index()).css({
+                        background: '#f6f5ef'
+                    })
+                    $('.navigation_link_bottom').eq($(this).index()).css({
+                        color:'#333',
+                        'text-decoration':'none'
+                    })
+
+                    $('.sub_menu').eq($(this).index()).css({
+                        display:'none'
+        
+                    })
+                }
+            })
+        
+        //menu_sub_pan : 100% 부분
+        
+            $('.sub_menu').mouseenter(function(){
+                $('.sub_menu').eq($(this).index()).css({
+                    display:'flex'
+                })
+            })
+            $('.sub_menu').mouseleave(function(){
+                $('.sub_menu').eq($(this).index()).css({
+                    display:'none'
+        
+                })
+            })
+        });
+    </script>
+</head>
+<body>
+<!-- 네비게이션바 -->
+<div class="navigation_container">
+    <nav class="navigation_container_main">
+        <div class="navigation_container_inner">
+            <div class="navigation_logo">
+                <a class="navigation_logo_img" href="/"></a>
+            </div>
+            <div class="navigation_inner">
+                <div class="navigation_top">
+                    <ul class="navigation_items">
+                        <li class="navigation_item">
+                            {% if user.is_authenticated %}
+                            <a class="navigation_link_top" href="{% url 'common:logout' %}">{{ user.username }} (로그아웃)</a>
+                            {% else %}
+                            <a class="navigation_link_top" href="{% url 'common:login' %}">Sign In</a>
+                            {% endif %}
+                        </li>
+                        <li>
+                            {% if not user.is_authenticated %}
+                            <a class="navigation_link_top" href="{% url 'common:signup' %}">회원가입</a>
+                            {% endif %}
+                        </li>
+                        <li class="navigation_item">
+                            <a class="navigation_link_top navigation_division" href="#">My Anti-pore</a>
+                        </li>
+                        <li class="navigation_item">
+                            <a class="navigation_link_top" href="#">Customer Service</a>
+                        </li>
+                        <li>
+                            <a class="navigation_search"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="navigation_bottom">
+                    <ul class="navigation_items">
+                        <li class="navigation_item">
+                            <a class="navigation_link_bottom" href="#">COSMETICS</a>
+                        </li>
+                        <li class="navigation_item">
+                            <a class="navigation_link_bottom" href="#">STORE</a>
+                        </li>
+                        <li class="navigation_item">
+                            <a class="navigation_link_bottom" href="#">RESPONSIBILTY</a>
+                        </li>
+                        <li class="navigation_item">
+                            <a class="navigation_link_bottom" href="#">ANTI-PORE REWARDS</a>
+                        </li>
+                        <li class="navigation_item">
+                            <a class="navigation_link_bottom" href="#">WHAT`S NEW</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 서브 메뉴 부분 -->
+            </div>
+        </div>
+    </nav>
+    <nav class="sub_navigation">
+        <div class="sub_menu">
+            <ul>
+                <li>스킨</li>
+                <li>Anti-pore Toner</li>
+                <li>Mus Toner</li>
+                <li>Moana Toner</li>
+                <li>Maria Toner</li>
+                <li>Roma Toner</li>
+            </ul>
+            <ul>
+                <li>로션</li>
+                <li>Anti-pore Lotion</li>
+                <li>Mus Lotion</li>
+                <li>Moana Lotion</li>
+                <li>Maria Lotion</li>
+                <li>Roma Lotion</li>
+            </ul>
+            <ul>
+                <li>선크림</li>
+                <li>Anti-pore Sunscreen</li>
+                <li>Mus Sunscreen</li>
+                <li>Moana Sunscreen</li>
+                <li>Maria Sunscreen</li>
+                <li>Roma Sunscreen</li>
+            </ul>
+            <ul>
+                <li>마스크팩</li>
+                <li>Anti-pore Mask Pack</li>
+                <li>Mus Mask Pack</li>
+                <li>Moana Mask Pack</li>
+                <li>Maria Mask Pack</li>
+                <li>Roma Mask Pack</li>
+            </ul>
+            <ul>
+                <li>클렌징폼</li>
+                <li>Anti-pore Cleansing Foam</li>
+                <li>Mus Cleansing Foam</li>
+                <li>Moana Cleansing Foam</li>
+                <li>Maria Cleansing Foam</li>
+                <li>Roma Cleansing Foam</li>
+            </ul>
+        </div>
+        <div class="sub_menu">
+            <ul>
+                <li>경남</li>
+                <li>김해점</li>
+                <li>창원점</li>
+                <li>마산점</li>
+                <li>진주점</li>
+                <li></li>
+            </ul>
+            <ul>
+                <li>부산</li>
+                <li>사상점</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="sub_menu">
+            <ul>
+                <li>환경 보호 활동</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul>
+                <li>지역 사회 참여 활동</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="sub_menu">
+            <ul>
+                <li>안티포어 리워드</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul>
+                <li>안티포어 카드</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+        <div class="sub_menu">
+            <ul>
+                <li>이벤트</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul>
+                <li>뉴스</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <ul>
+                <li>공지사항</li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+    </nav>
+</div>
+</body>
+</html>

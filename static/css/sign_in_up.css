@@ -1,0 +1,93 @@
+
+/* Sign In */
+.login_container{
+    background: url("../img/login_background_img.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_inner{
+    background: white;
+    width: 570px;
+    height: 480px;
+}
+.login_title{
+    width: 100%;
+    height: 80px;
+    border-bottom: 1px solid rgb(199, 199, 199);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login_title p{
+    color: #777;
+    font-size: 18px;
+    line-height: 24px;
+}
+.login_title p span{
+    color: #006633;
+}
+.login_main{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+}
+.login_main_inner{
+    background: white;
+    margin-top: 20px;
+    width: 90%;
+    height: 90%;
+}
+.input_box{
+    width: 100%;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    border-radius: 3px;
+    padding: 15px;
+    margin-bottom: 10px;
+}
+.login_button{
+    background: #006633;
+    width: 100%;
+    height: 60px;
+    margin-top: 25px;
+    border: 0px;
+    border-radius: 3px;
+    text-align: center;
+    font-size: 24px;
+    color: white;
+}
+.login_main_inner_text{
+    margin-top: 20px;
+    width: 100%;
+}
+.login_main_inner_text p{
+    font-size: 14;
+    line-height: 1.4;
+    color: #006633;
+}
+
+/* Sign Up */
+.signup_inner{
+    background: white;
+    width: 570px;
+    height: 580px;
+}
+.signup_main{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+}
+.signup_main_inner{
+    background: white;
+    margin-top: 20px;
+    width: 90%;
+    height: 90%;
+}
