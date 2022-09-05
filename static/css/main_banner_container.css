@@ -1,0 +1,23 @@
+
+
+/*  Main Banner  */
+  .main_banner_container{
+    background: url("../img/main_banner_bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .main_banner_text{
+    background: url("../img/car_text.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+  }
+  .main_banner_img{
+    background: url("../img/car.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+  }

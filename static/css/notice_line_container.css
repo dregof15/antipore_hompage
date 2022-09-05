@@ -1,0 +1,43 @@
+
+/* Notice Line */
+.notice_line_left_text{
+    color: white;
+    font-size: 24px;
+    padding-left: 5%;
+  }
+  
+  .notice_line_left_plus_img{
+    background: url("../img/plus.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+  }
+  
+
+  .notice_line_left_plus_img:hover{
+    cursor: pointer;
+  }
+  
+  
+  .notice_line_right_text{
+    color: black;
+    font-size: 24px;
+    padding-left: 5%;
+  }
+  
+  .notice_line_right_minus_img{
+    background: url("../img/minus.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 50px;
+    width: 50px;
+    position: absolute;
+  }
+  
+  .notice_line_right_minus_img{
+    cursor: pointer;
+  }
