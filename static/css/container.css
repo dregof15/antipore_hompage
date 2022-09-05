@@ -349,6 +349,7 @@ ul{
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  overflow: hidden;
   height: 750px;
   width: 100%;
   display: flex;
