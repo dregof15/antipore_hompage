@@ -9,12 +9,6 @@
   }
   
   
-  .favorite_banner_left_inner{
-    top: 15%;
-    right: 10%;
-    height: 100%;
-    position: absolute;
-  }
   
   .favorite_banner_text1{
     background: url("../img/favorite_text1.png");
