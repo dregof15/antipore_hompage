@@ -9,9 +9,16 @@ body{
   .navigation_container{
     display: none;
   }
+  .mobile_navigation_topbox{
+    background: #f6f5ef;
+    height: 70px;
+    width: 100%;
+  }
   .mobile_navigation_container{
     height: 70px;
     width: 100%;
+    z-index: 999;
+    position: fixed;
   }
   /*  Top Banner  Mobile */
   .top_banner_container_size{
@@ -522,24 +529,16 @@ body{
   }
 }
 
-
 .reserve_magazine_button:hover{
   cursor: pointer;
 }
-
 .reserve_magazine_url{
   color: black;
 }
 
-
-
-
-
-
 .store_banner_button:hover{
   cursor: pointer;
 }
-
 .store_banner_url{
   color: black;
 }

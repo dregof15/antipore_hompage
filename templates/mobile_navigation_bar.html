@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mobile_sidebar{
+            background: white;
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 70%;
+            z-index: 999;
+        }
+        .mobile_sidebar_inner{
+            height: 100%;
+        }
+        .mobile_sidebar_search{
+            background: #2d2926;
+            height: 12%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mobile_sidebar_search_inner{
+            background: #2d2926;
+            height: 45%;
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .mobile_sidebar_search_text{
+            box-sizing: border-box;
+            border-radius: 3px;
+            border: 1px solid white;
+            height: 100%;
+            width: 68%;
+        }
+        .mobile_sidebar_search_button{
+            background: #666666;
+            border-radius: 3px;
+            border: 1px solid #666666;
+            height: 100%;
+            width: 28%;
+            font-size: 100%;
+            color: white;
+        }
+        .mobile_sidebar_inner ul{
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-left: 0;
+        }
+        .mobile_sidebar_list{
+            background: #111111;
+            border-bottom: 1px solid #222;
+            width: 100%;
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 76px;
+            text-indent: 20px;
+            color: white;
+            display:list-item;
+        }
+        .mobile_sidebar_list_up{
+            background: white;
+            display: block;
+            height: 12px;
+            margin-top: -6px;
+            right: 40px;
+            position: absolute;
+            width: 21px;
+        }
+        .mobile_sidebar_list_inner{
+            background: #181818;
+            border-bottom: 1px solid #222;
+            font-size: 18px;
+            font-weight: normal;
+            line-height: 76px;
+            text-indent: 35px;
+            color: white;
+            display:list-item;
+        }
+    </style>
+</head>
+<body>
+    <!-- mobile_sidebar_list_up 수정해야함  -->
+    <div class="mobile_sidebar">
+        <div class="mobile_sidebar_inner">
+            <aside></aside>
+            <div class="mobile_sidebar_search">
+                <div class="mobile_sidebar_search_inner">
+                    <input class="mobile_sidebar_search_text" type="text">
+                    <button class="mobile_sidebar_search_button">Search</button>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li class="mobile_sidebar_list">COSMETICS<span class="mobile_sidebar_list_up"></span></li>
+                    <li class="mobile_sidebar_list_inner">스킨</li>
+                    <li class="mobile_sidebar_list_inner">로션</li>
+                    <li class="mobile_sidebar_list_inner">선크림</li>
+                    <li class="mobile_sidebar_list_inner">마스크팩</li>
+                    <li class="mobile_sidebar_list_inner">클렌징폼</li>
+                </ul>
+                <ul>
+                    <li class="mobile_sidebar_list">STORE<span class="mobile_sidebar_list_up"></span></li>
+                    <li class="mobile_sidebar_list_inner">경남</li>
+                    <li class="mobile_sidebar_list_inner">부산</li>
+                </ul>
+                <ul>
+                    <li class="mobile_sidebar_list">RESPONSIBILITY<span class="mobile_sidebar_list_up"></span></li>
+                    <li class="mobile_sidebar_list_inner">환경 보호 활동</li>
+                    <li class="mobile_sidebar_list_inner">지역 사회 참여 활동</li>
+                </ul>
+                <ul>
+                    <li class="mobile_sidebar_list">ANTI-PORE REWARDS<span class="mobile_sidebar_list_up"></span></li>
+                    <li class="mobile_sidebar_list_inner">안티포어 리워드</li>
+                    <li class="mobile_sidebar_list_inner">안티포어 카드</li>
+                </ul>
+                <ul>
+                    <li class="mobile_sidebar_list">WHAT`S NEW<span class="mobile_sidebar_list_up"></span></li>
+                    <li class="mobile_sidebar_list_inner">이벤트</li>
+                    <li class="mobile_sidebar_list_inner">뉴스</li>
+                    <li class="mobile_sidebar_list_inner">공지사항</li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</body>
+</html>
