@@ -131,6 +131,9 @@ ul{
     width: 210px;
     position: relative;
   }
+  .mobile_navigation_container_main_right ul li:hover{
+    cursor: pointer;
+  }
   .mobile_navigation_img1{
     background: url("../img/mobile_img1.png");
     background-position: center;

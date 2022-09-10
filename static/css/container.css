@@ -542,3 +542,50 @@ body{
 .store_banner_url{
   color: black;
 }
+
+
+
+
+/* mobile_sidelist */
+
+.mobile_sidebar_list_up{
+  background: url("../img/list_up.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 40px;
+  margin-top: 25px;
+  right: 40px;
+  position: absolute;
+}
+.mobile_sidebar_list_down{
+  background: url("../img/list_down.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 25px;
+  width: 40px;
+  margin-top: 25px;
+  right: 40px;
+  position: absolute;
+}
+
+.mobile_sidebar_close{
+  background: url("../img/sidebar_close_img.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 50px;
+  height: 50px;
+  top: 40px;
+  left: -70px;
+  transform: rotate(0deg);
+  transition: all 1s;
+  position: absolute;
+}
+.mobile_sidebar_close:hover{
+  transform: rotate(180deg);
+  transition: all 1s;
+  cursor: pointer;
+}
