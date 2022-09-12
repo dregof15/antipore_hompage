@@ -23,27 +23,24 @@
     position: absolute;
   }
   .top_banner_cosmetics1{
-    background: url("../img/cosmetics1.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
+    max-height: 360px;
+    max-width: 170px;
+    height: 100%;
+    width: 100%;
   }
   
   .top_banner_cosmetics2{
-    background: url("../img/cosmetics2.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
+    max-height: 360px;
+    max-width: 170px;
+    height: 100%;
+    width: 100%;
   }
   
   .top_banner_cosmetics3{
-    background: url("../img/cosmetics3.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
+    max-height: 360px;
+    max-width: 170px;
+    height: 100%;
+    width: 100%;
   }
   
   .top_banner_detail_button:hover{

@@ -38,22 +38,19 @@ body{
     bottom: 10%;
   }
   .top_banner_cosmetics1_size{
-    height: 360px;
-    width: 170px;
     right: 10%;
     top: 5%;
+    position: absolute;
   }
   .top_banner_cosmetics2_size{
-    height: 360px;
-    width: 170px;
     right: 10%;
     bottom: 5%;
+    position: absolute;
   }
   .top_banner_cosmetics3_size{
-    height: 360px;
-    width: 170px;
     left: 10%;
     top: 30%;
+    position: absolute;
   }
   
   /* Notice Line  Mobile */
