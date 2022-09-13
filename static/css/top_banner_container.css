@@ -6,14 +6,6 @@
     background-repeat: no-repeat;
     position: relative;
   }
-  .top_banner_img{
-    background: url("../img/top_banner_img1.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    position: absolute;
-  }
-  
   .top_banner_detail_button{
     border: 2px solid white;
     border-radius: 10%;

@@ -5,7 +5,307 @@ body{
 }
 
 /* Mobile */
-@media (max-width: 1000px) {
+@media (max-width: 519px) {
+  .navigation_container{
+    display: none;
+  }
+  .mobile_navigation_topbox{
+    background: #f6f5ef;
+    height: 70px;
+    width: 100%;
+  }
+  .mobile_navigation_container{
+    height: 70px;
+    width: 100%;
+    z-index: 999;
+    position: fixed;
+  }
+  /*  Top Banner  Mobile */
+  .top_banner_container_size{
+    height: 850px;
+    width: 100%;
+  }
+  .top_banner_img_box{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .top_banner_img_size{
+    margin-top: 70px;
+    max-height: 140px;
+    max-width: 180px;
+    height: 100%;
+    width: 100%;
+  }
+  .top_banner_detail_button_box{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+  }
+  .top_banner_detail_button_size{
+    height: 50px;
+    width: 161px;
+    bottom: 10%;
+  }
+  .top_banner_cosmetics1_size{
+    width: 50%;
+    right: 0%;
+    top: 5%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+  }
+  .top_banner_cosmetics2_size{
+    width: 50%;
+    right: 0%;
+    bottom: 5%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+  }
+  .top_banner_cosmetics3_size{
+    width: 50%;
+    left: 0%;
+    top: 30%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+  }
+  
+  /* Notice Line  Mobile */
+  .notice_line_container{
+    background: url("../img/mobile_notice_line_bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 160px;
+    width: 100%;
+  }
+  .notice_line_left{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  .notice_line_right{
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .notice_line_left_plus_img_size{
+    right: 3.3%;
+  }
+  .notice_line_right_minus_img_size{
+    right: 3%;
+  }
+
+  /*  Main Banner  */
+  .main_banner_container_size{
+    height: 700px;
+    width: 100%;
+    position: relative;
+  }
+  .main_banner_text_size{
+    max-height: 125px;
+    max-width: 300px;
+    height: 100%;
+    width: 100%;
+    left: 10%;
+    top: 8%;
+    position: absolute;
+  }
+  .main_banner_img_size{
+    max-height: 300px;
+    max-width: 300px;
+    height: 100%;
+    width: 100%;
+    right: -5%;
+    bottom: 3%;
+    position: absolute;
+  } 
+  
+  /*  Favorite Banner  */
+  .favorite_banner_container_size{
+    height: 800px;
+    width: 100%;
+  }
+  .favorite_banner_left{
+    top: 59%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .favorite_banner_left_inner{
+    top: 15%;
+    height: 100%;
+    position: absolute;
+  }
+  .favorite_banner_text1{
+    max-height: 220px;
+    max-width: 220px;
+    /* position: absolute; */
+  }
+  .favorite_banner_text2{
+    background: url("../img/favorite_text2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 420px;
+    top: 45%;
+    display: none;
+    /* position: absolute; */
+  }
+  .favorite_banner_right{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .favorite_banner_button_box{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+  }
+  .favorite_banner_img{
+    margin-top: 130px;
+    max-height: 460px;
+    max-width: 651px;
+    height: auto;
+    width: 100%;
+    position: absolute;
+  }
+
+  /*  Reserve Magazine   */
+  .reserve_magazine_container{
+    background: url("../img/mobile_reserve_magazine_bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+    width: 100%;
+  }
+
+  .reserve_magazine_left{
+    top: 5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .reserve_magazine_left_inner{
+    position: absolute;
+  }
+  .reserve_magazine_text{
+    margin-top: 15%;
+    max-height: 200px;
+    max-width: 482px;
+    height: 100%;
+    width: 100%;
+  }
+  .reserve_display1{
+    display: none;
+  }
+  .mobile_reserve_button_size{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .reserve_magazine_button{
+    border: 2px solid black;
+    border-radius: 10%;
+    margin-top: 600px;
+    height: 50px;
+    width: 161px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .reserve_magazine_right{
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+  .reserve_magazine_img{
+    max-height: 550px;
+    max-width: 560px;
+    height: auto;
+    width: 100%;
+    top: 40%;
+    right: 5%;
+    position: absolute;
+  }
+
+  /*  Store Banner  */
+  .store_banner_contianer{
+    background: url("../img/store_banner_bg.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+    overflow: hidden;
+  }
+  .store_banner_left{
+    top: -15%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .store_banner_img{
+    max-height: 440px;
+    max-width: 440px;
+    height: auto;
+    width: 100%;
+    position: absolute;
+  }
+  .store_banner_right{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  .store_banner_right_inner{
+    top: 60%;
+    position: absolute;
+  }
+  .store_banner_text1{
+    max-height: 50px;
+    max-width: 480px;
+    height: auto;
+    width: 100%;
+  }
+  .store_banner_text2{
+    height: 50px;
+    width: 440px;
+    margin-top: 20px;
+    display: none;
+  }
+  .store_banner_button_box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .store_banner_button{
+    border: 2px solid black;
+    border-radius: 10%;
+    margin-top: 30px;
+    height: 50px;
+    width: 161px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+/* Tablet */
+@media (min-width: 520px) and (max-width: 1000px) {
   .navigation_container{
     display: none;
   }
@@ -30,6 +330,7 @@ body{
     width: 180px;
     left: 10%;
     top: 6%;
+    position: absolute;
   }
   .top_banner_detail_button_size{
     height: 50px;
@@ -96,16 +397,22 @@ body{
     position: relative;
   }
   .main_banner_text_size{
-    height: 125px;
-    width: 300px;
+    max-height: 125px;
+    max-width: 300px;
+    height: 100%;
+    width: 100%;
     left: 10%;
     top: 15%;
+    position: absolute;
   }
   .main_banner_img_size{
-    height: 300px;
-    width: 300px;
+    max-height: 300px;
+    max-width: 300px;
+    height: 100%;
+    width: 100%;
     right: 5%;
     bottom: 10%;
+    position: absolute;
   } 
   
   /*  Favorite Banner  */
@@ -125,6 +432,21 @@ body{
     height: 100%;
     position: absolute;
   }
+  .favorite_banner_text1{
+    height: 220px;
+    width: 220px;
+    /* position: absolute; */
+  }
+  .favorite_banner_text2{
+    background: url("../img/favorite_text2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 420px;
+    top: 45%;
+    /* position: absolute; */
+  }
   .favorite_banner_right{
     width: 100%;
     height: 100%;
@@ -133,11 +455,8 @@ body{
     position: relative;
   }
   
+  
   .favorite_banner_img{
-    background: url("../img/favorite_img.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     margin-top: 50px;
     height: 460px;
     width: 651px;
@@ -162,21 +481,27 @@ body{
     position: relative;
   }
   .reserve_magazine_left_inner{
-    top: 35%;
     position: absolute;
   }
   .reserve_magazine_text{
+    margin-top: 10%;
     max-height: 250px;
     max-width: 603px;
     height: 100%;
     width: 100%;
   }
-  
+  .reserve_display1{
+    display: none;
+  }
+  .mobile_reserve_button_size{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   .reserve_magazine_button{
     border: 2px solid black;
     border-radius: 10%;
-    margin-left: 200px;
-    margin-top: 880px;
+    margin-top: 840px;
     height: 50px;
     width: 161px;
     text-align: center;
@@ -190,18 +515,13 @@ body{
     position: relative;
   }
   .reserve_magazine_img{
-    background: url("../img/reserve_magazine_img.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 550px;
-    width: 560px;
+    max-height: 550px;
+    max-width: 560px;
+    height: 100%;
+    width: 100%;
     top: 40%;
     right: 5%;
     position: absolute;
-  }
-  .reserve_display1{
-    display: none;
   }
 
   /*  Store Banner  */
@@ -242,21 +562,14 @@ body{
     position: absolute;
   }
   .store_banner_text1{
-    background: url("../img/store_banner_text1.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 50px;
     width: 480px;
   }
   .store_banner_text2{
-    background: url("../img/store_banner_text2.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 50px;
     width: 440px;
     margin-top: 20px;
+    display: block;
   }
   .store_banner_button{
     border: 2px solid black;
@@ -273,7 +586,7 @@ body{
 }
 
 /* PC */
-@media (min-width: 1000px) {
+@media (min-width: 1001px) {
   .navigation_container{
     height: 125px;
     position: relative;
@@ -292,6 +605,7 @@ body{
     width: 180px;
     left: 10%;
     top: 31%;
+    position: absolute;
   }
   .top_banner_detail_button_size{
     height: 40px;
@@ -304,18 +618,21 @@ body{
     width: 170px;
     left: 30%;
     top: 12%;
+    position: absolute;
   }
   .top_banner_cosmetics2_size{
     height: 360px;
     width: 170px;
     left: 50%;
     top: 22%;
+    position: absolute;
   }
   .top_banner_cosmetics3_size{
     height: 360px;
     width: 170px;
     left: 70%;
     top: 12%;
+    position: absolute;
   }
   
   /* Notice Line */
@@ -363,6 +680,7 @@ body{
     width: 300px;
     right: 20%;
     top: 30%;
+    position: absolute;
   }
   .main_banner_right{
     width: 50%;
@@ -374,6 +692,7 @@ body{
     width: 300px;
     left: 20%;
     top: 20%;
+    position: absolute;
   }
 
   /*  Favorite Banner  */
@@ -393,6 +712,21 @@ body{
     height: 100%;
     position: absolute;
   }
+  .favorite_banner_text1{
+    height: 220px;
+    width: 220px;
+    /* position: absolute; */
+  }
+  .favorite_banner_text2{
+    background: url("../img/favorite_text2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 420px;
+    top: 45%;
+    /* position: absolute; */
+  }
   .favorite_banner_right{
     width: 50%;
     height: 100%;
@@ -400,10 +734,6 @@ body{
   }
   
   .favorite_banner_img{
-    background: url("../img/favorite_img.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 480px;
     width: 680px;
     top: 15%;
@@ -506,18 +836,10 @@ body{
     position: absolute;
   }
   .store_banner_text1{
-    background: url("../img/store_banner_text1.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 50px;
     width: 480px;
   }
   .store_banner_text2{
-    background: url("../img/store_banner_text2.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
     height: 50px;
     width: 440px;
     margin-top: 20px;

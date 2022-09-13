@@ -10,15 +10,6 @@
   
   
   
-  .favorite_banner_text1{
-    background: url("../img/favorite_text1.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 220px;
-    width: 220px;
-    /* position: absolute; */
-  }
   
   .favorite_banner_text2{
     background: url("../img/favorite_text2.png");
