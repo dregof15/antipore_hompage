@@ -254,7 +254,11 @@
         </div>
         <div class="mobile_navigation_container_main_right">
             <ul>
+                {% if user.is_authenticated %}
                 <li><a class="mobile_navigation_img1"></a></li>
+                {% else %}
+                <li><a class="mobile_navigation_img1" href="{% url 'common:login' %}"></a></li>
+                {% endif %}
                 <li><a class="mobile_navigation_img2"></a></li>
                 <li><a class="mobile_navigation_img3"></a></li>
             </ul>

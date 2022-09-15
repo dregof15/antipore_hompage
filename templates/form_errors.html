@@ -5,27 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .modal_wrap{
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%,-50%);
+          width: 400px;
+          height: 350px;
+          background: white;
+          z-index: 1050;
+        }
+        .modal_close{
+            float:right;
+            margin:8px;
+        }
+        .error_text_box{
+            display: flex;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $('.modal_close').on("click", function() {
+                $('.modal_wrap').css({
+                    display:'none'
+                })
+            });
+        });
+    </script>
 </head>
 <body>
 <!-- 필드 오류와 넌필드 오류를 출력한다. -->
 {% if form.errors %}
-<div class="alert alert-danger">
-    {% for field in form %}
-    <!-- 필드 오류 -->
-    {% if field.errors %}
-    <div>
-        <strong>{{ field.label }}</strong>
-        {{ field.errors }}
+    <div class="modal_wrap">
+        <button class="modal_close">x</button>
+        {% for field in form %}
+        <!-- 필드 오류 -->
+        {% if field.errors %}
+        <div>
+            <div class="error_text_box"><p>{{ field.label }}</p><p>{{ field.errors }}</p></div>
+        </div>
+        {% endif %}
+        {% endfor %}
+        <!-- 넌필드 오류 -->
+        {% for error in form.non_field_errors %}
+        <div>
+            <strong>{{ error }}</strong>
+        </div>
+        {% endfor %}
     </div>
-    {% endif %}
-    {% endfor %}
-    <!-- 넌필드 오류 -->
-    {% for error in form.non_field_errors %}
-    <div>
-        <strong>{{ error }}</strong>
-    </div>
-    {% endfor %}
-</div>
 {% endif %}
 </body>
 </html>

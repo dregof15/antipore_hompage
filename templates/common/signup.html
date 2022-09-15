@@ -5,6 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .modal_wrap{
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            background: white;
+            z-index: 1050;
+            border: 3px solid #c1d78a;
+            position: absolute;
+        }
+        .modal_wrap_inner{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal_wrap_inner table tbody tr td{
+            color: red;
+        }
+        .modal_close{
+            background: white;
+            color: #006633;
+            font-weight: 700;
+            font-size: 15px;
+            border: none;
+            float:right;
+            margin:8px;
+        }
+        .error_text_box{
+            display: flex;
+        }
+    </style>
 </head>
 <body>
     {% extends "base.html" %}
@@ -18,10 +52,10 @@
                 <div class="signup_main_inner">
                     <form method="post" action="{% url 'common:signup' %}">
                         {% csrf_token %}
-                            <input type="text" class="input_box" name="username" id="username" placeholder="아이디를 입력하세요." value="{{ form.username.value|default_if_none:'' }}">
-                            <input type="password" class="input_box" name="password1" id="password1" placeholder="비밀번호를 입력하세요." value="{{ form.password1.value|default_if_none:'' }}">
-                            <input type="password" class="input_box" name="password2" id="password2" placeholder="비밀번호를 재입력하세요." value="{{ form.password2.value|default_if_none:'' }}">
-                            <input type="text" class="input_box" name="email" id="email" placeholder="이메일을 입력하세요." value="{{ form.email.value|default_if_none:'' }}">
+                        <input type="text" class="input_box" name="username" id="username" placeholder="아이디를 입력하세요." value="{{ form.username.value|default_if_none:'' }}">
+                        <input type="password" class="input_box" name="password1" id="password1" placeholder="비밀번호를 입력하세요." value="{{ form.password1.value|default_if_none:'' }}">
+                        <input type="password" class="input_box" name="password2" id="password2" placeholder="비밀번호를 재입력하세요." value="{{ form.password2.value|default_if_none:'' }}">
+                        <input type="text" class="input_box" name="email" id="email" placeholder="이메일을 입력하세요." value="{{ form.email.value|default_if_none:'' }}">
                         <button type="submit" class="login_button">회원가입</button>
                     </form>
                     <div class="login_main_inner_text">
@@ -32,6 +66,46 @@
             </div>
         </div>
     </div>
+    <!-- django form -->
+    {% if form.errors %}
+        <div class="modal_wrap">
+            <button class="modal_close">x</button>
+            <div class="modal_wrap_inner">
+                <table>
+                    <tbody>
+                        {% for field in form %}
+                        <!-- 필드 오류 -->
+                        {% if field.errors %}
+                        <tr>
+                            <th>{{ field.label }}</th><td>{{ field.errors }}</td>
+                        </tr>
+                        {% endif %}
+                        {% endfor %}
+                        <!-- 넌필드 오류 -->
+                        {% for error in form.non_field_errors %}
+                        <tr>
+                            <th>{{ error }}</th>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endif %}
+<!-- django form end -->
+    
+    <script>
+        $(document).ready(function(){
+            $('.modal_close').on("click", function() {
+                
+            });
+            $('.modal_close').on("click", function() {
+                $('.modal_wrap').css({
+                    display:'none'
+                })
+            });
+        });
+    </script>
     {% endblock %}
 </body>
 </html>

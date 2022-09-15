@@ -92,7 +92,7 @@ ul{
     text-decoration: underline;
   }
   .navigation_bottom ul li{
-    height: 100%;
+    height: 56px;
   }
   .sub_navigation{
     width: 100%;
