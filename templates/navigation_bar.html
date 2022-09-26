@@ -89,7 +89,11 @@
                             {% endif %}
                         </li>
                         <li class="navigation_item">
-                            <a class="navigation_link_top navigation_division" href="#">My Anti-pore</a>
+                            {% if user.is_authenticated %}
+                            <a class="navigation_link_top navigation_division" href="{% url 'common:mypage' %}">My Anti-pore</a>
+                            {% else %}
+                            <a class="navigation_link_top navigation_division" href="{% url 'common:login' %}">My Anti-pore</a>
+                            {% endif %}
                         </li>
                         <li class="navigation_item">
                             <a class="navigation_link_top" href="#">Customer Service</a>
@@ -255,7 +259,7 @@
         <div class="mobile_navigation_container_main_right">
             <ul>
                 {% if user.is_authenticated %}
-                <li><a class="mobile_navigation_img1"></a></li>
+                <li><a class="mobile_navigation_img1" href="{% url 'common:mypage' %}"></a></li>
                 {% else %}
                 <li><a class="mobile_navigation_img1" href="{% url 'common:login' %}"></a></li>
                 {% endif %}

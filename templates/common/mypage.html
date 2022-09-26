@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mypage_container{
+            background: white;
+            width: 100%;
+            height: 900px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .mypage_inner{
+            background: white;
+            max-width: 570px;
+            width: 100%;
+            height: 730px;
+        }
+        .mypage_title{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: center;
+            font-size: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        .mypage_main_inner:nth-child(n+3){
+            margin-top: 15px;
+        }
+        .mypage_main_inner{
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 10px;
+            padding-bottom: 3px;
+        }
+        .mypage_main_inner label{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-weight: bold;
+            font-size: 18px;
+            padding-left: 1px;
+        }
+        .mypage_main_inner input{
+            margin-top: 10px;
+        }
+        .mypage_main_inner:nth-child(n+3) input{
+            background: #f4f4f2;
+        }
+        .mypage_main_inner_text{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .mypage_main_inner_text p{
+            font-size: 14;
+            line-height: 1.4;
+            color: #006633;
+            width: 93%;
+        }
+    </style>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+<div class="mypage_container">
+    <div class="mypage_inner">
+        <div class="mypage_title">
+            <P>개인정보 확인 및 수정</P>
+        </div>
+        <div class="mypage_main">
+            <form method="post" action="{% url 'common:mypage' %}">
+                {% csrf_token %}
+                <div class="mypage_main_inner">
+                    <label>아이디</label>
+                    <input type="text" class="input_box" name="username" id="username" placeholder="{{ user.username }}" value="{{ user.username }}" readonly>
+                </div>
+                <div class="mypage_main_inner">
+                    <label>비밀번호</label>
+                    <input type="password" class="input_box" name="password" id="password" placeholder="비밀번호를 입력하세요." value="{{ form.password.value|default_if_none:'' }}">
+                </div>
+                <div class="mypage_main_inner">
+                    <label>비밀번호 확인</label>
+                    <input type="password" class="input_box" name="password2" id="password2" placeholder="비밀번호를 재입력하세요." value="{{ form.password2.value|default_if_none:'' }}">
+                </div>
+                <div class="mypage_main_inner">
+                    <label>이메일</label>
+                    <input type="text" class="input_box" name="email" id="email" placeholder="{{ user.email }}" value="{{ form.email.value|default_if_none:'' }}">
+                </div>
+                <div class="mypage_main_inner_text">
+                    <p>* 타 사이트와 비밀번호를 동일하게 사용할 경우 도용의 위험이 있으므로, 정기적인 비밀번호 변경을 해주시길 바랍니다.</p>
+                </div>
+                <button type="submit" class="login_button">정보수정</button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+</body>
+</html>
