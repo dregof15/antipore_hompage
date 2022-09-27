@@ -41,3 +41,19 @@
   .notice_line_right_minus_img{
     cursor: pointer;
   }
+
+
+
+  /* location_page */
+
+  .location_page_container{
+    background: url("../img/location_page_bg2.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

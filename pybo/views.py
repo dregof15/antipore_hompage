@@ -18,3 +18,7 @@ def detail(request, customer_id):
     customer = get_object_or_404(Customer, pk=customer_id)
     context = {'customer': customer}
     return render(request, 'pybo/customer_detail.html', context)
+
+
+def location_page(request):
+    return render(request, 'pybo/location_page.html')

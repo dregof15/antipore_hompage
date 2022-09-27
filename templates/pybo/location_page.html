@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .location_page_map{
+            max-width: 1000px;
+            width: 90%;
+            height: 450px;
+        }
+    </style>
+</head>
+<body>
+{% extends "base.html" %}
+{% block content %}
+    <div class="location_page_container">
+        <iframe class="location_page_map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1629.1827599536239!2d128.86791085307257!3d35.24716131851104!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3568c77a3c944eaf%3A0xefc8a0fb782a438e!2z64m065287J207ZSE!5e0!3m2!1sko!2skr!4v1664289987717!5m2!1sko!2skr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+{% endblock %}
+</body>
+</html>

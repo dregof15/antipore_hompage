@@ -63,6 +63,9 @@
     font-size: 24px;
     color: white;
 }
+.login_button:hover{
+    cursor: pointer;
+}
 .sign_up_button{
     background: #c1c1c1;
     width: 100%;
