@@ -67,7 +67,8 @@
             color: white;
             display:list-item;
         }
-        .mobile_sidebar_list_inner{
+        .mobile_sidebar_list_inner a{
+            text-decoration-line: none;
             background: #181818;
             border-bottom: 1px solid #222;
             font-size: 18px;
@@ -120,32 +121,32 @@
             <nav>
                 <ul>
                     <li class="mobile_sidebar_list">COSMETICS<span class="mobile_sidebar_list_down mobile_sidebar_list_up"></span></li>
-                    <li class="mobile_sidebar_list_inner">스킨</li>
-                    <li class="mobile_sidebar_list_inner">로션</li>
-                    <li class="mobile_sidebar_list_inner">선크림</li>
-                    <li class="mobile_sidebar_list_inner">마스크팩</li>
-                    <li class="mobile_sidebar_list_inner">클렌징폼</li>
+                    <li class="mobile_sidebar_list_inner"><a href="{% url 'pybo:loading_page' %}">스킨</a></li>
+                    <li class="mobile_sidebar_list_inner"><a href="{% url 'pybo:loading_page' %}">로션</a></li>
+                    <li class="mobile_sidebar_list_inner"><a href="{% url 'pybo:loading_page' %}">선크림</a></li>
+                    <li class="mobile_sidebar_list_inner"><a href="{% url 'pybo:loading_page' %}">마스크팩</a></li>
+                    <li class="mobile_sidebar_list_inner"><a href="{% url 'pybo:loading_page' %}">클렌징폼</a></li>
                 </ul>
                 <ul>
                     <li class="mobile_sidebar_list">STORE<span class="mobile_sidebar_list_down mobile_sidebar_list_up"></span></li>
-                    <li class="mobile_sidebar_list_inner">경남</li>
-                    <li class="mobile_sidebar_list_inner">부산</li>
+                    <li class="mobile_sidebar_list_inner"><a href="{% url 'pybo:loading_page' %}">경남</a></li>
+                    <li class="mobile_sidebar_list_inner"><a href="{% url 'pybo:loading_page' %}">부산</a></li>
                 </ul>
                 <ul>
                     <li class="mobile_sidebar_list">RESPONSIBILITY<span class="mobile_sidebar_list_down mobile_sidebar_list_up"></span></li>
-                    <li class="mobile_sidebar_list_inner">환경 보호 활동</li>
-                    <li class="mobile_sidebar_list_inner">지역 사회 참여 활동</li>
+                    <li class="mobile_sidebar_list_inner"><a href="{% url 'pybo:loading_page' %}">환경 보호 활동</a></li>
+                    <li class="mobile_sidebar_list_inner"><a href="{% url 'pybo:loading_page' %}">지역 사회 참여 활동</a></li>
                 </ul>
                 <ul>
                     <li class="mobile_sidebar_list">ANTI-PORE REWARDS<span class="mobile_sidebar_list_down mobile_sidebar_list_up"></span></li>
-                    <li class="mobile_sidebar_list_inner">안티포어 리워드</li>
-                    <li class="mobile_sidebar_list_inner">안티포어 카드</li>
+                    <li class="mobile_sidebar_list_inner"><a href="{% url 'pybo:loading_page' %}">안티포어 리워드</a></li>
+                    <li class="mobile_sidebar_list_inner"><a href="{% url 'pybo:loading_page' %}">안티포어 카드</a></li>
                 </ul>
                 <ul>
                     <li class="mobile_sidebar_list">WHAT`S NEW<span class="mobile_sidebar_list_down mobile_sidebar_list_up"></span></li>
-                    <li class="mobile_sidebar_list_inner">이벤트</li>
-                    <li class="mobile_sidebar_list_inner">뉴스</li>
-                    <li class="mobile_sidebar_list_inner">공지사항</li>
+                    <li class="mobile_sidebar_list_inner"><a href="{% url 'pybo:loading_page' %}">이벤트</a></li>
+                    <li class="mobile_sidebar_list_inner"><a href="{% url 'pybo:loading_page' %}">뉴스</a></li>
+                    <li class="mobile_sidebar_list_inner"><a href="{% url 'pybo:loading_page' %}">공지사항</a></li>
                 </ul>
             </nav>
         </div>
