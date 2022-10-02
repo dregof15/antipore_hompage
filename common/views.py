@@ -37,7 +37,3 @@ def mypage(request):
     else:
         form = UserForm()
     return render(request, 'common/mypage.html', {'form': form})
-
-
-def location_page(request):
-    return render(request, 'pybo/location_page.html')

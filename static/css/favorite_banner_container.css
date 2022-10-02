@@ -11,16 +11,7 @@
   
   
   
-  .favorite_banner_text2{
-    background: url("../img/favorite_text2.png");
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 150px;
-    width: 420px;
-    top: 45%;
-    /* position: absolute; */
-  }
+
   
   .favorite_banner_button{
     border: 2px solid white;

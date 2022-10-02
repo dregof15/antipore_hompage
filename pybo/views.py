@@ -22,3 +22,7 @@ def detail(request, customer_id):
 
 def location_page(request):
     return render(request, 'pybo/location_page.html')
+
+
+def loading_page(request):
+    return render(request, 'pybo/loading_page.html')
