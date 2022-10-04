@@ -5,6 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        $(document).ready(function(){
+            $('nav > ul > li, nav ul li ul li').hide();
+            $('nav ul li.mobile_sidebar_list').show();
+
+            $('nav > ul > li.mobile_sidebar_list > span').on("click", function() {
+                
+                $(this).parent().siblings().stop(true, true).slideToggle();
+                $(this).toggleClass('mobile_sidebar_list_up');
+                
+            });
+        });
+        
+    </script>
 </head>
 <body>
 {% extends 'base.html' %}
@@ -16,7 +30,7 @@
             </div>
             <div class="top_banner_detail_button_box">
                 <div class="top_banner_detail_button top_banner_detail_button_size">
-                    <a class="top_banner_detail_url">자세히 보기</a>
+                    <a class="top_banner_detail_url" href="{% url 'pybo:loading_page' %}">자세히 보기</a>
                 </div>
             </div>
             <div class="top_banner_cosmetics1_size">
@@ -58,7 +72,7 @@
                     <div class="favorite_banner_text2"></div>
                     <div class="favorite_banner_button_box">
                         <div class="favorite_banner_button">
-                            <a class="favorite_banner_url">자세히 보기</a>
+                            <a class="favorite_banner_url" href="{% url 'pybo:loading_page' %}">자세히 보기</a>
                         </div>
                     </div>
                 </div>
@@ -76,7 +90,7 @@
                     </div>
                     <div class="mobile_reserve_button_size">
                         <div class="reserve_magazine_button">
-                            <a class="reserve_magazine_url">자세히 보기</a>
+                            <a class="reserve_magazine_url" href="{% url 'pybo:loading_page' %}">자세히 보기</a>
                         </div>
                     </div>
                 </div>
@@ -97,7 +111,7 @@
                     <img src="../../static/img/store_banner_text2.png" class="store_banner_text2">
                     <div class="store_banner_button_box">
                         <div class="store_banner_button">
-                            <a class="store_banner_url">매장 찾기</a>
+                            <a class="store_banner_url" href="{% url 'pybo:location_page' %}">매장 찾기</a>
                         </div>
                     </div>
                 </div>

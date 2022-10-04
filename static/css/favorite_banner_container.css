@@ -31,5 +31,6 @@
   }
   
   .favorite_banner_url{
+    text-decoration: none;
     color: white;
   }

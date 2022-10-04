@@ -116,6 +116,9 @@ ul{
         font-weight: bold;
         color: white;
     }
+    .sub_menu ul li:hover{
+      cursor: pointer;
+    }
   
   /*  Mobile Navigation  */
   .mobile_navigation_container_main{
