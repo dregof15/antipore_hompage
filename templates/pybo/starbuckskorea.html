@@ -1,123 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <script>
-        $(document).ready(function(){
-            $('nav > ul > li, nav ul li ul li').hide();
-            $('nav ul li.mobile_sidebar_list').show();
+      $(document).ready(function () {
+        $("nav > ul > li, nav ul li ul li").hide();
+        $("nav ul li.mobile_sidebar_list").show();
 
-            $('nav > ul > li.mobile_sidebar_list > span').on("click", function() {
-                
-                $(this).parent().siblings().stop(true, true).slideToggle();
-                $(this).toggleClass('mobile_sidebar_list_up');
-                
-            });
+        $("nav > ul > li.mobile_sidebar_list > span").on("click", function () {
+          $(this).parent().siblings().stop(true, true).slideToggle();
+          $(this).toggleClass("mobile_sidebar_list_up");
         });
-        
+      });
     </script>
-</head>
-<body>
-{% extends 'base.html' %}
-{% block content %}
+  </head>
+  <body>
+    {% extends 'base.html' %} {% block content %}
     <div class="container">
-        <div class="top_banner_container top_banner_container_size">
-            <div class="top_banner_img_box">
-                <img src="../../static/img/top_banner_img1.png" class="top_banner_img_size">
-            </div>
-            <div class="top_banner_detail_button_box">
-                <div class="top_banner_detail_button top_banner_detail_button_size">
-                    <a class="top_banner_detail_url" href="{% url 'pybo:loading_page' %}">자세히 보기</a>
-                </div>
-            </div>
-            <div class="top_banner_cosmetics1_size">
-                <img src="../../static/img/cosmetics1.png" class="top_banner_cosmetics1">
-            </div>
-            <div class="top_banner_cosmetics2_size">
-                <img src="../../static/img/cosmetics2.png" class="top_banner_cosmetics2">
-            </div>
-            <div class="top_banner_cosmetics3_size">
-                <img src="../../static/img/cosmetics3.png" class="top_banner_cosmetics3">
-            </div>
+      <div class="top_banner_container top_banner_container_size">
+        <div class="top_banner_img_box">
+          <img
+            src="../../static/img/top_banner_img1.png"
+            class="top_banner_img_size"
+          />
         </div>
-        <div class="notice_line_container">
-            <div class="notice_line_left">
-                <p class="notice_line_left_text">공지사항</p>
-                <div class="notice_line_left_plus_img notice_line_left_plus_img_size"></div>
-            </div>
-            <div class="notice_line_right">
-                <p class="notice_line_right_text">안티포어 프로모션</p>
-                <div class="notice_line_right_minus_img notice_line_right_minus_img_size"></div>
-            </div>
+        <div class="top_banner_detail_button_box">
+          <div class="top_banner_detail_button top_banner_detail_button_size">
+            <a
+              class="top_banner_detail_url"
+              href="{% url 'pybo:loading_page' %}"
+              >자세히 보기</a
+            >
+          </div>
         </div>
-        <div class="main_banner_container main_banner_container_size">
-            <div class="main_banner_left">
-                <div>
-                    <img src="../../static/img/car_text.png" class="main_banner_text_size">
-                </div>
-            </div>
-            <div class="main_banner_right">
-                <div>
-                    <img src="../../static/img/car.png" class="main_banner_img_size">
-                </div>
-            </div>
+        <div class="top_banner_cosmetics1_size">
+          <img
+            src="../../static/img/cosmetics1.png"
+            class="top_banner_cosmetics1"
+          />
         </div>
-        <div class="favorite_banner_container favorite_banner_container_size">
-            <div class="favorite_banner_left">
-                <div class="favorite_banner_left_inner">
-                    <img src="../../static/img/favorite_text1.png" class="favorite_banner_text1">
-                    <div class="favorite_banner_text2"></div>
-                    <div class="favorite_banner_button_box">
-                        <div class="favorite_banner_button">
-                            <a class="favorite_banner_url" href="{% url 'pybo:loading_page' %}">자세히 보기</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="favorite_banner_right">
-                <img src="../../static/img/favorite_img.png" class="favorite_banner_img">
-            </div>
+        <div class="top_banner_cosmetics2_size">
+          <img
+            src="../../static/img/cosmetics2.png"
+            class="top_banner_cosmetics2"
+          />
         </div>
-        <div class="reserve_magazine_container">
-            <div class="reserve_magazine_left">
-                <div class="reserve_magazine_left_inner">
-                    <div>
-                        <img src="../../static/img/reserve_magazine_text2.png" class="reserve_magazine_text reserve_display1">
-                        <img src="../../static/img/mobile_reserve_magazine_text2.png" class="reserve_magazine_text reserve_display2">
-                    </div>
-                    <div class="mobile_reserve_button_size">
-                        <div class="reserve_magazine_button">
-                            <a class="reserve_magazine_url" href="{% url 'pybo:loading_page' %}">자세히 보기</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="reserve_magazine_right">
-                <div>
-                    <img src="../../static/img/reserve_magazine_img.png" class="reserve_magazine_img">
-                </div>
-            </div>
+        <div class="top_banner_cosmetics3_size">
+          <img
+            src="../../static/img/cosmetics3.png"
+            class="top_banner_cosmetics3"
+          />
         </div>
-        <div class="store_banner_contianer">
-            <div class="store_banner_left">
-                <img src="../../static/img/store_banner_img.png" class="store_banner_img">
-            </div>
-            <div class="store_banner_right">
-                <div class="store_banner_right_inner">
-                    <img src="../../static/img/store_banner_text1.png" class="store_banner_text1">
-                    <img src="../../static/img/store_banner_text2.png" class="store_banner_text2">
-                    <div class="store_banner_button_box">
-                        <div class="store_banner_button">
-                            <a class="store_banner_url" href="{% url 'pybo:location_page' %}">매장 찾기</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="notice_line_container">
+        <div class="notice_line_left">
+          <p class="notice_line_left_text">공지사항</p>
+          <div
+            class="notice_line_left_plus_img notice_line_left_plus_img_size"
+          ></div>
         </div>
+        <div class="notice_line_right">
+          <p class="notice_line_right_text">안티포어 프로모션</p>
+          <div
+            class="notice_line_right_minus_img notice_line_right_minus_img_size"
+          ></div>
+        </div>
+      </div>
+      <div class="main_banner_container main_banner_container_size">
+        <div class="main_banner_left">
+          <div>
+            <img
+              src="../../static/img/car_text.png"
+              class="main_banner_text_size"
+            />
+          </div>
+        </div>
+        <div class="main_banner_right">
+          <div>
+            <img src="../../static/img/car.png" class="main_banner_img_size" />
+          </div>
+        </div>
+      </div>
+      <div class="favorite_banner_container favorite_banner_container_size">
+        <div class="favorite_banner_left">
+          <div class="favorite_banner_left_inner">
+            <img
+              src="../../static/img/favorite_text1.png"
+              class="favorite_banner_text1"
+            />
+            <div class="favorite_banner_text2"></div>
+            <div class="favorite_banner_button_box">
+              <div class="favorite_banner_button">
+                <a
+                  class="favorite_banner_url"
+                  href="{% url 'pybo:loading_page' %}"
+                  >자세히 보기</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="favorite_banner_right">
+          <img
+            src="../../static/img/favorite_img.png"
+            class="favorite_banner_img"
+          />
+        </div>
+      </div>
+      <div class="reserve_magazine_container">
+        <div class="reserve_magazine_left">
+          <div class="reserve_magazine_left_inner">
+            <div>
+              <img
+                src="../../static/img/reserve_magazine_text2.png"
+                class="reserve_magazine_text reserve_display1"
+              />
+              <img
+                src="../../static/img/mobile_reserve_magazine_text2.png"
+                class="reserve_magazine_text reserve_display2"
+              />
+            </div>
+            <div class="mobile_reserve_button_size">
+              <div class="reserve_magazine_button">
+                <a
+                  class="reserve_magazine_url"
+                  href="{% url 'pybo:loading_page' %}"
+                  >자세히 보기</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="reserve_magazine_right">
+          <div>
+            <img
+              src="../../static/img/reserve_magazine_img.png"
+              class="reserve_magazine_img"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="store_banner_contianer">
+        <div class="store_banner_left">
+          <img
+            src="../../static/img/store_banner_img.png"
+            class="store_banner_img"
+          />
+        </div>
+        <div class="store_banner_right">
+          <div class="store_banner_right_inner">
+            <img
+              src="../../static/img/store_banner_text1.png"
+              class="store_banner_text1"
+            />
+            <img
+              src="../../static/img/store_banner_text2.png"
+              class="store_banner_text2"
+            />
+            <div class="store_banner_button_box">
+              <div class="store_banner_button">
+                <a
+                  class="store_banner_url"
+                  href="{% url 'pybo:location_page' %}"
+                  >매장 찾기</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-{% endblock %}
-</body>
+    {% endblock %}
+  </body>
 </html>

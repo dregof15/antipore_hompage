@@ -1,7 +1,10 @@
+
+
 body{
   padding: 0;
   margin: 0;
   background-color: #f6f5ef;
+  
 }
 
 /* Mobile */
@@ -108,19 +111,19 @@ body{
   .main_banner_text_size{
     max-height: 125px;
     max-width: 300px;
-    height: 100%;
+    height: auto;
     width: 100%;
-    left: 10%;
-    top: 8%;
+    left: 5%;
+    top: 10%;
     position: absolute;
   }
   .main_banner_img_size{
     max-height: 300px;
     max-width: 300px;
-    height: 100%;
+    height: auto;
     width: 100%;
-    right: -5%;
-    bottom: 3%;
+    right: 0%;
+    bottom: 0%;
     position: absolute;
   } 
   
